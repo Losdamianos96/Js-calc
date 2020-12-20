@@ -1,0 +1,71 @@
+
+<!doctype>
+
+<html>
+  <head>
+    <title>Notch test</title>
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover">
+    <script src="https://code.jquery.com/jquery-3.3.1.js"></script>
+    <script src="aos.js"></script>
+    <script type="text/javascript" src="./calc.js"></script>
+    <script type="text/javascript"></script>
+    <style>
+      * {margin: 0;padding: 0;}
+      p {margin-bottom: 16px;}
+      body {font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;font-weight: 400;font-size: 16px;}
+
+      header {
+        font-size: 16px;
+        text-align: center;
+        height: 50px;
+        background-color: rgb(61, 110, 216);
+        color: #fff;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding-top: env(safe-area-inset-top);
+      }
+
+      #main {
+        padding-top: 16px;
+        padding-left: max(16px, env(safe-area-inset-left));
+        padding-right: max(16px, env(safe-area-inset-right));
+        padding-bottom: env(safe-area-inset-bottom);
+      }
+    </style>
+    
+  </head>
+  <body>
+    <header>Welcome</header>
+    <div id="main">
+      <div class="calculator">
+        <div class="container">
+             <h1 data-aos="fade-right">Kalkulator</h1>
+             <div data-aos="fade-up" class="line"></div>
+         <form class="calc-form">
+             <p data-aos="fade-right">Oblicz jakiej mocy instalacji fotowoltaicznej potrzebujesz.</p>
+ 
+             <label  for="energy"><h2 data-aos="fade-right">Zużycie energii w kWh za zeszłym rok:</h2></label>
+             <input style="width: 300px; font-size: 20px;;" type="text" id="energy">
+               <h2 data-aos="fade-right">Na jaką stronę geograficzną masz dach?</h2>
+             <input type="radio" id="south" name="direction" checked value="south">
+             <label for="south">Ekspozycja południowa</label>
+         
+             <input type="radio" id="eastwest" name="direction" value="eastwest">
+             <label for="eastwest">Ekspozycja wschodnia/zachodnia</label><br><br>
+         
+             <input type="submit" value="Oblicz">
+ 
+             <h2 data-aos="fade-right">Twoje zapotrzebowanie: <span id="output-val"></span>kWp</h2>
+         </form> 
+        </div>
+    </div>
+  </script>
+  <script src="aos.js"></script>
+  <script type="text/javascript">
+          AOS.init();
+  </script>
+  </body>
+</html>
